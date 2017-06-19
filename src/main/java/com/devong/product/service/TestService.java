@@ -1,8 +1,11 @@
 package com.devong.product.service;
 
-/**
- * Created by actmember on 19/06/2017.
- */
+
+import com.devong.product.entity.Product;
+
+import java.util.List;
+
 public interface TestService {
+    List<Product> getProducts();
 
 }
