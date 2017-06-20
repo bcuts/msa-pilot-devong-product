@@ -27,5 +27,11 @@ public class ProductLoader implements ApplicationListener<ContextRefreshedEvent>
         productRepository.save(chicken2);
 
         log.info("Saved chicken2 - id: " + chicken2.getProductName());
+
+        Product chicken3 = new Product(13000,"또봉이 양념치킨");
+        productRepository.save(chicken3);
+
+        log.info("Saved chicken3 - id: " + chicken3.getProductName());
+
     }
 }
