@@ -13,7 +13,7 @@ public class TestController {
     @Autowired
     TestService service;
 
-    @RequestMapping("/")
+    @GetMapping("/")
     @ResponseBody
     String home() {
         return "Hello World!";
