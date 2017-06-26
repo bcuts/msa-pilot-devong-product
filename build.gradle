@@ -2,6 +2,7 @@ group 'com.kwang'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
 
 buildscript {
     repositories {
@@ -12,7 +13,14 @@ buildscript {
     }
 }
 
+springBoot{
+    mainClass = "com.devong.product.StartApplication"
+}
+
 jar {
+    manifest{
+        attributes 'Title' : 'devong-product' , 'Version' : version , 'Main-Class' : 'com.devong.product.StartApplication'
+    }
     baseName = 'msa-pilot-devong-product'
     version =  '0.1.0'
 }

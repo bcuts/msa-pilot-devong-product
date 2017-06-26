@@ -26,6 +26,8 @@ public class TestController {
 
     @GetMapping(value = "/product/{productNumber}")
     Product getProduct(@PathVariable long productNumber) {
+        Product product = service.getProduct(productNumber);
+
         return service.getProduct(productNumber);
     }
 
